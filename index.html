@@ -4,17 +4,20 @@
   <meta charset="UTF-8" />
   <title>Battleship</title>
   <style>
-    .boards-container { display: flex; gap: 40px; margin-top: 20px; }
+    body { font-family: sans-serif; text-align: center; }
+    .boards-container { display: flex; justify-content: center; gap: 40px; margin-top: 20px; }
     .board { display: grid; grid-template-columns: repeat(10, 30px); grid-template-rows: repeat(10, 30px); gap: 2px; }
     .cell { width: 30px; height: 30px; background-color: #e0e0e0; border: 1px solid #ccc; cursor: pointer; }
     .cell.ship { background-color: #4a90e2; }
     .cell.hit { background-color: #e74c3c; }
     .cell.miss { background-color: #7f8c8d; }
+    button { padding: 10px 20px; font-size: 1rem; margin-top: 15px; cursor: pointer; }
   </style>
 </head>
 <body>
   <h1>Battleship</h1>
   <h2 id="status-message"></h2>
+  <button id="randomize-btn">Randomize Fleet & Restart</button>
 
   <div class="boards-container">
     <div>
