@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Battleship</title>
+  <style>
+    .boards-container { display: flex; gap: 40px; margin-top: 20px; }
+    .board { display: grid; grid-template-columns: repeat(10, 30px); grid-template-rows: repeat(10, 30px); gap: 2px; }
+    .cell { width: 30px; height: 30px; background-color: #e0e0e0; border: 1px solid #ccc; cursor: pointer; }
+    .cell.ship { background-color: #4a90e2; }
+    .cell.hit { background-color: #e74c3c; }
+    .cell.miss { background-color: #7f8c8d; }
+  </style>
+</head>
+<body>
+  <h1>Battleship</h1>
+  <h2 id="status-message"></h2>
+
+  <div class="boards-container">
+    <div>
+      <h3>Your Board</h3>
+      <div id="player-board" class="board"></div>
+    </div>
+    <div>
+      <h3>Enemy Board</h3>
+      <div id="computer-board" class="board"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/index.js"></script>
+</body>
+</html>
